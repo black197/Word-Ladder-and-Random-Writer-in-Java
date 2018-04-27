@@ -4,13 +4,11 @@ import java.io.*;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Queue;
-import java.util.Scanner;
 import java.util.Stack;
 import java.util.LinkedList;
 
 public class WordLadder {
 	private Set<String> dic;
-	private Scanner scanner;
 	
 	public WordLadder() { //Set up dictionary
 		dic = setUpDic("res/dictionary.txt");
@@ -23,10 +21,7 @@ public class WordLadder {
 		
 		/* Initialize dictionary */
 		Set<String> dic = new HashSet<String>();
-		
-		/* Initialize scanner */
-		scanner = new Scanner(System.in);
-		
+
 		try {
 			fileReader = new FileReader(file);
 			br = new BufferedReader(fileReader);
@@ -36,11 +31,10 @@ public class WordLadder {
 			while ((tmp = br.readLine()) != null) {
 				dic.add(tmp);
 			}
-			System.out.println("Reading complete!");
 		}catch (FileNotFoundException e) {
-			System.out.println("�ļ�������");
+			System.out.println("File not found.");
 		}catch (IOException e) {
-			System.out.println("�ļ���ȡʧ��");
+			System.out.println("Fail in openning file.");
 		}finally {
 			/* Close files */
 			try {
@@ -51,7 +45,6 @@ public class WordLadder {
 			}
 		}
 		
-		System.out.println("number of words:" + dic.size());
 		return dic;
 	}
 	

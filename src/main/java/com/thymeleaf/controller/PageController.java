@@ -27,4 +27,9 @@ public class PageController {
     	map.put("answer", result);
     	return "index";
     }
+    
+    @RequestMapping("/login")
+    public String greetingLogin() {
+    	return "login";
+    }
 }
