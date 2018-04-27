@@ -1,3 +1,6 @@
-Rewrite homework WordLadder in Java with Eclipse, Gradle and Junit.
+WordLadder on server, written in Java with Eclipse, Springboot, Maven, Thymeleaf and SpringSecurity.
 
-.java files are under src/main/java, test files are under src/test/java, related documents are under folder res
+Run as Springboot App and visit [localhost:8080/](localhost:8080/).
+
+Username:admin
+Password:root
